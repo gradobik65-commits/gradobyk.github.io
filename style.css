@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #141414;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #0d0d0d;
+    border-bottom: 2px solid #ff4500;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.logo span {
+    color: #ff4500;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+.tab-btn {
+    background: none;
+    border: 1px solid transparent;
+    color: #aaa;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover {
+    color: #fff;
+    background-color: #222;
+}
+
+.tab-btn.active {
+    color: #fff;
+    background-color: #ff4500;
+    border-color: #ff4500;
+}
+
+.tab-content {
+    display: none;
+    padding: 30px 0;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+h2 {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 15px;
+    border-left: 4px solid #ff4500;
+    padding-left: 12px;
+}
+
+.intro-text {
+    color: #aaa;
+    font-size: 16px;
+    margin-bottom: 40px;
+    max-width: 800px;
+}
+
+.guitar-card {
+    background-color: #1d1d1d;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.guitar-card:hover {
+    transform: translateY(-2px);
+    border-color: #ff4500;
+}
+
+.guitar-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #333;
+    flex-shrink: 0;
+}
+
+.guitar-details h3 {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.guitar-details p {
+    color: #ccc;
+    font-size: 15px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #2a120a;
+    color: #ff4500;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 4px;
+    text-transform: uppercase;
+    border: 1px solid #4a1e10;
+}
+
+/* СТИЛІ ДЛЯ СЕКЦІЇ БУДОВИ */
+.anatomy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 25px;
+}
+
+.anatomy-card {
+    background-color: #1d1d1d;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 25px;
+    border-top: 3px solid #ff4500;
+}
+
+.anatomy-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.anatomy-card h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.anatomy-card p {
+    color: #bbb;
+    font-size: 14.5px;
+    text-align: justify;
+}
+
+.video-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.video-card {
+    background-color: #1d1d1d;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.video-preview {
+    width: 80px;
+    height: 80px;
+    background-color: #262626;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    flex-shrink: 0;
+}
+
+.video-info h4 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.video-info p {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.watch-btn {
+    color: #ff4500;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.watch-btn:hover {
+    color: #fff;
+}
+
+footer {
+    background-color: #0d0d0d;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 60px;
+    border-top: 1px solid #222;
+    font-size: 13px;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .guitar-card, .video-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .anatomy-grid {
+        grid-template-columns: 1fr;
+    }
+}
